@@ -8,7 +8,7 @@
 
         <variable
             name="userdetailsname"
-            type="com.example.bindingadapter.UserDetails" />
+            type="com.example.bindingadapter.UserModel" />
 
     </data>
 
@@ -23,6 +23,7 @@
             android:id="@+id/txtname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:layout_marginTop="10dp"
             android:text="@={userdetailsname.name}"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -51,6 +52,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtlastname" />
+
+        <EditText
+            android:id="@+id/editname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imgcutom"
+            android:layout_marginTop="10dp"
+            android:maxLength="40"
+            android:text="@={userdetailsname.name}"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
